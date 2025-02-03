@@ -6,13 +6,13 @@ type UserService struct {
 	userRepo *repo.UserRepo
 }
 
-func NewUserRepo() *UserService {
+func NewUserRepoService() *UserService {
 	return &UserService{
 		userRepo: repo.NewUserRepo(),
 	}
 }
 
-// user  repo u
+// user  repo ur
 func (us *UserService) GetInfoUserService() string {
 	return us.userRepo.GetInfoUser()
 }

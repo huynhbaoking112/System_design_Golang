@@ -1,10 +1,9 @@
 package controller
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/huynhbaoking112/System_design_Golang/internal/service"
+	"github.com/huynhbaoking112/System_design_Golang/package/response"
 )
 
 type UserController struct {
@@ -13,19 +12,10 @@ type UserController struct {
 
 func NewUserController() *UserController {
 	return &UserController{
-		userService: service.NewUserRepo(),
+		userService: service.NewUserRepoService(),
 	}
 }
 
 func (uc *UserController) GetUserById(c *gin.Context) {
-	uid := c.Query("uid")
-	c.JSON(http.StatusOK, gin.H{
-		"message": uc.userService.GetInfoUserService(),
-		"uid":     uid,
-		"users": []string{
-			"cr7",
-			"m10",
-			"king",
-		},
-	})
+	response.SuccessResponse(c, 20001, []string{"king", "huynh"})
 }
