@@ -1,12 +1,22 @@
 package setting
 
 type Config struct {
-	Mysql  MySQLSetting `mapstructure:"mysql"`
-	Server Server       `mapstructure:"server"`
+	Mysql         MySQLSetting  `mapstructure:"mysql"`
+	Server        Server        `mapstructure:"server"`
+	LoggerSetting LoggerSetting `mapstructure:"log"`
 }
 
 type Server struct {
 	Port string `mapstructure:"port"`
+}
+
+type LoggerSetting struct {
+	Log_level     string `mapstructure:"log_level"`
+	File_log_name string `mapstructure:"file_log_name"`
+	Max_size      int    `mapstructure:"max_size"`
+	Max_backups   int    `mapstructure:"max_backups"`
+	Max_age       int    `mapstructure:"max_age"`
+	Compress      bool   `mapstructure:"compress"`
 }
 
 type MySQLSetting struct {
