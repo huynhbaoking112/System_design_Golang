@@ -3,8 +3,8 @@ server:
 mysql:
   host: 127.0.0.1
   port: 3306
-  username: root
-  passowrd: root1234
+  username: king
+  password: king
   dbname: shopdevgo
   maxIdleCons: 10
   maxOpenConns: 100
