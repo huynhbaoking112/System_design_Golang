@@ -13,3 +13,15 @@
 {"level":"error","ts":"2025-02-05T08:02:34.798+0700","caller":"initialize/mysql.go:16","msg":"InitMySql initialization error","error":"Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)","stacktrace":"github.com/huynhbaoking112/System_design_Golang/internal/initialize.checkErrorPanic\n\tC:/Project/go_backend/bai1/internal/initialize/mysql.go:16\ngithub.com/huynhbaoking112/System_design_Golang/internal/initialize.InitMySql\n\tC:/Project/go_backend/bai1/internal/initialize/mysql.go:34\ngithub.com/huynhbaoking112/System_design_Golang/internal/initialize.Run\n\tC:/Project/go_backend/bai1/internal/initialize/run.go:13\nmain.main\n\tC:/Project/go_backend/bai1/cmd/server/main.go:11\nruntime.main\n\tC:/software/laptrinh/go/src/runtime/proc.go:272"}
 {"level":"info","ts":"2025-02-05T08:07:11.557+0700","caller":"initialize/run.go:12","msg":"Config Log Ok!!","ok":"success"}
 {"level":"info","ts":"2025-02-05T08:07:11.583+0700","caller":"initialize/mysql.go:35","msg":"Initializing MySQL Successfully"}
+{"level":"info","ts":"2025-02-05T08:31:24.916+0700","caller":"initialize/mysql.go:35","msg":"Initializing MySQL Successfully"}
+{"level":"info","ts":"2025-02-05T08:32:39.086+0700","caller":"initialize/mysql.go:30","msg":"Initializing MySQL Successfully"}
+{"level":"info","ts":"2025-02-05T08:32:39.211+0700","caller":"initialize/redis.go:18","msg":"Initializing Redis Successfully"}
+{"level":"info","ts":"2025-02-05T20:17:50.512+0700","caller":"initialize/run.go:14","msg":"Config Log Ok!!","ok":"success"}
+{"level":"info","ts":"2025-02-05T20:17:50.610+0700","caller":"initialize/mysql.go:30","msg":"Initializing MySQL Successfully"}
+{"level":"info","ts":"2025-02-05T20:17:50.866+0700","caller":"initialize/run.go:22","msg":"Initializing Redis Successfully"}
+{"level":"info","ts":"2025-02-06T19:18:21.121+0700","caller":"initialize/logger.go:11","msg":"Config Log Ok!!","ok":"success"}
+{"level":"info","ts":"2025-02-06T19:18:21.229+0700","caller":"initialize/mysql.go:30","msg":"Initializing MySQL Successfully"}
+{"level":"error","ts":"2025-02-06T19:18:21.528+0700","caller":"initialize/redis.go:24","msg":"Initializing Redis fail","error":"dial tcp 127.0.0.1:6381: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/huynhbaoking112/System_design_Golang/internal/initialize.InitRedis\n\tC:/Project/go_backend/bai1/internal/initialize/redis.go:24\ngithub.com/huynhbaoking112/System_design_Golang/internal/initialize.Run\n\tC:/Project/go_backend/bai1/internal/initialize/run.go:10\nmain.main\n\tC:/Project/go_backend/bai1/cmd/server/main.go:11\nruntime.main\n\tC:/software/laptrinh/go/src/runtime/proc.go:272"}
+{"level":"info","ts":"2025-02-06T19:19:09.797+0700","caller":"initialize/logger.go:11","msg":"Config Log Ok!!","ok":"success"}
+{"level":"info","ts":"2025-02-06T19:19:09.819+0700","caller":"initialize/mysql.go:30","msg":"Initializing MySQL Successfully"}
+{"level":"info","ts":"2025-02-06T19:19:10.028+0700","caller":"initialize/redis.go:27","msg":"Initializing Redis Successfully"}

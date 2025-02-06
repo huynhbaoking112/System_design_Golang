@@ -26,7 +26,6 @@ func InitLoadConfig() {
 	viper.SetConfigType("yaml")
 
 	//read configuration
-
 	err := viper.ReadInConfig()
 	if err != nil {
 		panic(fmt.Errorf("Failed to read configuration %w \n", err))
@@ -40,7 +39,7 @@ func InitLoadConfig() {
 
 	//configure structure
 	if err := viper.Unmarshal(&global.Config); err != nil {
-		fmt.Printf("Unable to decode configuration %v", err)
+		panic(fmt.Errorf("Unable to decode configuration %v", err))
 	}
 
 }
