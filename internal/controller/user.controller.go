@@ -1,24 +1,31 @@
 package controller
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/huynhbaoking112/System_design_Golang/internal/service"
 	"github.com/huynhbaoking112/System_design_Golang/package/response"
 )
 
 type UserController struct {
-	userService *service.UserService
+	userService service.IUserService
 }
 
-func NewUserController() *UserController {
+func NewUserController(
+	userService service.IUserService,
+) *UserController {
 	return &UserController{
-		userService: service.NewUserRepoService(),
+		userService: userService,
 	}
 }
 
-func (uc *UserController) GetUserById(c *gin.Context) {
-	fmt.Println("MyHandler")
-	response.SuccessResponse(c, 20001, []string{"king", "huynh"})
+func (uc *UserController) Register(c *gin.Context) {
+	result := uc.userService.Register("", "")
+	response.SuccessResponse(c, result, nil)
 }
+
+// func (uc *UserController) GetUserById(c *gin.Context) {
+// 	fmt.Println("MyHandler")
+// 	response.SuccessResponse(c, 20001, []string{"king", "huynh"})
+// }
+
+// VERSION
