@@ -3,7 +3,7 @@ server:
   mode: "dev"
 mysql:
   host: 127.0.0.1
-  port: 3306
+  port: 33306
   username: king
   password: king
   dbname: shopdevgo
@@ -20,7 +20,7 @@ log:
   compress: true
 redis:
   host: 127.0.0.1
-  port: 6379
+  port: 6381
   password:
   database: 0
   poolsize: 10
