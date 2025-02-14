@@ -20,11 +20,11 @@ type IUserRepo interface {
 type userRepo struct {
 }
 
+func NewUserRepository() IUserRepo {
+	return &userRepo{}
+}
+
 // GetUserByEmail implements IUserRepo.
 func (u *userRepo) GetUserByEmail(email string) bool {
 	return true
-}
-
-func NewUserRepository() IUserRepo {
-	return &userRepo{}
 }

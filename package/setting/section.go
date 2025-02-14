@@ -38,4 +38,5 @@ type MySQLSetting struct {
 	MaxIdleCons     int    `mapstructure:"maxIdleCons"`
 	MaxOpenConns    int    `mapstructure:"maxOpenConns"`
 	ConnMaxLifetime int    `mapstructure:"connMaxLifetime"`
+	ConnMaxIdleTime int    `mapstructure:"connMaxIdleTime"`
 }

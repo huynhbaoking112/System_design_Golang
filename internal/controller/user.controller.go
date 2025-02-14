@@ -22,10 +22,3 @@ func (uc *UserController) Register(c *gin.Context) {
 	result := uc.userService.Register("", "")
 	response.SuccessResponse(c, result, nil)
 }
-
-// func (uc *UserController) GetUserById(c *gin.Context) {
-// 	fmt.Println("MyHandler")
-// 	response.SuccessResponse(c, 20001, []string{"king", "huynh"})
-// }
-
-// VERSION

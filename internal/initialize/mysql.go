@@ -43,9 +43,14 @@ func SetPool() {
 	if err != nil {
 		global.Logger.Error("MySQL error setPool", zap.Error(err))
 	}
-	sqlDb.SetConnMaxIdleTime(time.Duration(m.MaxIdleCons))
+	sqlDb.SetConnMaxIdleTime(time.Duration(m.ConnMaxIdleTime) * time.Hour)
+
+	//set cấu hình số lượng connection rảnh có trong pool. Chỉ số này luôn nhỏ hơn hoặc bằng MaxOpenConns.
+	//	mặc	định	là	2	connection	rảnh
+	//	nếu	giá	trị	truyền	vào	max	<=	0	là	không	có	connection	rãnh	được	giữ	lại
+	sqlDb.SetMaxIdleConns(m.MaxIdleCons)
 	sqlDb.SetMaxOpenConns(m.MaxOpenConns)
-	sqlDb.SetConnMaxLifetime(time.Duration(m.ConnMaxLifetime))
+	sqlDb.SetConnMaxLifetime(time.Duration(m.ConnMaxLifetime) * time.Hour)
 }
 
 func migrateTables() {
